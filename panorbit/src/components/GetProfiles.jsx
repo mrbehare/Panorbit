@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { AppContest } from "../contestApi/ContestProvider";
+import { AppContext } from "../contextApi/ContextProvider";
 import style from "../css/getprofile.module.css";
 
 const GetProfiles = () => {
-  const { data, loading, error, getAllData } = useContext(AppContest); // getting data from contest api
+  const { data, loading, error, getAllData } = useContext(AppContext); // getting data from context api(works as props , but used to avoid props drilling)
 
   useEffect(() => {
     getAllData();

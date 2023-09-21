@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from "react";
-import { AppContest } from "../contestApi/ContestProvider";
+import { AppContext } from "../contextApi/ContextProvider";
 import style from "../css/homepage.module.css";
 import ProfileDetails from "../page/ProfileDetails";
 
 const TopNav = () => {
   const { profileData, setShowProfile, showProfile, getFilterData } =
-    useContext(AppContest); // getting data from contest api
+    useContext(AppContext); // getting data from contest api
 
   // ------------ (fetching data with param id)---------
   useEffect(() => {

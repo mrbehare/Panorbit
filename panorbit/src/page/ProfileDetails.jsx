@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import GetProfiles from "../components/GetProfiles";
-import { AppContest } from "../contestApi/ContestProvider";
+import { AppContext } from "../contextApi/ContextProvider";
 import style from "../css/profiledetails.module.css";
 
 const ProfileDetails = () => {
-  const { profileData, setShowProfile, showProfile } = useContext(AppContest); // getting data from contest api
+  const { profileData, setShowProfile, showProfile } = useContext(AppContext); // getting data from contest api
 
   const handleClick = () => {
     setShowProfile(false);

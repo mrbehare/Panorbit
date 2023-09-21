@@ -4,13 +4,13 @@ import { useParams } from "react-router-dom";
 import LeftNav from "../components/LeftNav";
 import ProfileBottom from "../components/ProfileBottom";
 import TopNav from "../components/TopNav";
-import { AppContest } from "../contestApi/ContestProvider";
+import { AppContext } from "../contextApi/ContextProvider";
 import style from "../css/homepage.module.css";
 
 const HomePage = () => {
   // eslint-disable-next-line no-unused-vars
   const { profileData, getFilterData, setShowProfile, showProfile } =
-    useContext(AppContest); // getting data from contest api
+    useContext(AppContext); // getting data from contest api
   const { id } = useParams();
   sessionStorage.setItem("id", id);
 
